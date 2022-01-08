@@ -1,0 +1,65 @@
+<Burger@MDList>:
+	TwoLineAvatarIconListItem:
+		text: "Burger Royal Cheese "
+		secondary_text: "chifla briosa, carne de vita Black Angus, cheddar, bacon, salata iceberg, ceapa, rosii"
+		on_release: app.pop1("images/royalchese.jpg")
+
+		IconRightWidget:
+			icon: "plus"
+			on_release: app.pizza_dialog(app.preturi['RoyalCheeseMare'],app.preturi['RoyalCheeseMic'],"images/royalchese.jpg","Burger Royal Chese")
+
+		ImageLeftWidget:
+			source:"images/royalchese.jpg"
+			size:root.size
+
+    TwoLineAvatarIconListItem:
+		text: "Burger Clasic "
+		secondary_text: "carne de vită, chiflă, maioneză, BBQ, salată iceberg, roșii, castraveți murați, ceapă"
+		on_release: app.pop1("images/burgerclasic.jpg")
+
+		IconRightWidget:
+			icon: "plus"
+			on_release: app.pizza_dialog(app.preturi['burgerclasicmare'],app.preturi['burgerclasicmic'],"images/burgerclasic.jpg","Burger Clasic")
+
+		ImageLeftWidget:
+			source:"images/burgerclasic.jpg"
+			size:root.size
+
+    TwoLineAvatarIconListItem:
+		text: "Hamburger Iute "
+		secondary_text: "Carne de vită, salată iceberg, ceapă roșie, gorgonzola, prosciutto, dulceață de ardei iute"
+		on_release: app.pop1("images/hamburgeriute.jpg")
+
+		IconRightWidget:
+			icon: "plus"
+			on_release: app.pizza_dialog(app.preturi['hamburgeriutemare'],app.preturi['hamburgeriutemic'],"images/hamburgeriute.jpg","Hamburger Iute")
+
+		ImageLeftWidget:
+			source:"images/hamburgeriute.jpg"
+			size:root.size
+
+    TwoLineAvatarIconListItem:
+		text: "Chicken Burger "
+		secondary_text: "Carne de pui, salată iceberg, porumb, ardei gras, mozzarella, ceapă pane, roșie, dulceață de ardei"
+		on_release: app.pop1("images/chickenburger.jpg")
+
+		IconRightWidget:
+			icon: "plus"
+			on_release: app.pizza_dialog(app.preturi['chickenburgermare'],app.preturi['chickenburgermic'],"images/chickenburger.jpg","Chicken Burger")
+
+		ImageLeftWidget:
+			source:"images/chickenburger.jpg"
+			size:root.size
+
+	TwoLineAvatarIconListItem:
+		text: "Burger Chorizo "
+		secondary_text: "carne de vită, salată iceberg, porumb, ceapă roșie, cheddar, chorizo"
+		on_release: app.pop1("images/chorizoburger.jpg")
+
+		IconRightWidget:
+			icon: "plus"
+			on_release: app.pizza_dialog(app.preturi['chorizoburgermare'],app.preturi['chorizoburgermic'],"images/chorizoburger.jpg","Burger Chorizo")
+
+		ImageLeftWidget:
+			source:"images/chorizoburger.jpg"
+			size:root.size

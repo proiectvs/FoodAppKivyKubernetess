@@ -1,0 +1,219 @@
+<Item>
+
+    #on_release:app.spr(app.nume, self.text)
+    on_release:app.comentariu_dialog(app.nume, self.text)
+    ImageLeftWidget:
+        source: root.source
+
+<Item1>
+    observatie:observatie
+    MDTextFieldRect:
+        id:observatie
+        size_hint :.8, .3
+
+<Poplogin>
+    size_hint:.5,.5
+    user:user
+    password:password
+
+    MDCard:
+        padding:25
+        spacing:25
+        orientation:'vertical'
+        MDLabel:
+            text:"Login"
+            pos_hint:{"center_x": 0.5}
+            font_size:40
+            hallign:'center'
+
+
+        MDTextFieldRound:
+            id:user
+            hint_text: "email"
+            icon_right: "account"
+            size_hint : .9 ,.2
+            pos_hint:{"center_x": 0.5}
+        MDTextFieldRound:
+            id:password
+            hint_text: "password"
+            icon_right: "eye-off"
+            size_hint : .9 ,.2
+            password: True
+            pos_hint:{"center_x": 0.5}
+        MDRoundFlatButton:
+            text:"Log in"
+            font_size:12
+            pos_hint:{"center_x": 0.5}
+            on_press:app.functieverificarelogin()
+
+<Popstare>
+    MDCard:
+        padding:25
+        spacing:25
+        orientation:'vertical'
+        MDLabel:
+            text:"Eroare"
+            pos_hint:{"center_x": 0.5}
+            font_size:40
+            hallign:'center'
+                #font_size:17
+            normal_color: app.theme_cls.accent_color
+
+<Popregister>
+    nume:nume
+    prenume:prenume
+    parola:parola
+    email:email
+    size_hint:.6,.6
+
+
+    MDCard:
+        padding:25
+        spacing:25
+        orientation:'vertical'
+        MDLabel:
+            text:"Register"
+            pos_hint:{"center_x": 0.5}
+            font_size:40
+            hallign:'center'
+            font_size:17
+            normal_color: app.theme_cls.accent_color
+
+        MDTextFieldRound:
+            id:nume
+            hint_text: "nume"
+            font_size:17
+            size_hint : .8 ,.6
+            pos_hint:{"center_x": 0.5}
+        MDTextFieldRound:
+            id:prenume
+            hint_text: "prenume"
+            font_size:17
+            size_hint : .8 ,.6
+            pos_hint:{"center_x": 0.5}
+        MDTextFieldRound:
+            id:parola
+            hint_text: "parola"
+            size_hint : .8 ,.6
+            font_size:17
+            password:True
+            pos_hint:{"center_x": 0.5}
+        MDTextFieldRound:
+            id:email
+            hint_text: "email"
+            font_size:17
+            size_hint : .8 ,.6
+            pos_hint:{"center_x": 0.5}
+        MDRoundFlatButton:
+            text:"Register"
+            font_size:15
+            pos_hint:{"center_x": 0.5}
+            on_press:app.functieinregistrare()
+
+
+
+<Menu1@MDList>:
+
+	TwoLineAvatarIconListItem:
+		text: "Pizza Mediterana "
+		secondary_text: "porumb ciuperci mozarella sunca"
+		on_release: app.pop1("images/mediterana.jpg")
+
+		IconRightWidget:
+			icon: "plus"
+			on_release: app.pizza_dialog(app.preturi['MediteranaMare'],app.preturi['MediteranaMica'],"images/mediterana.jpg","Pizza Mediterana")
+
+		ImageLeftWidget:
+			source:"images/Mediterana.jpg"
+			size:root.size
+		
+	TwoLineAvatarIconListItem:
+		text: "Pizza Suprema "
+		secondary_text: "mozzarella, sos rosii, salam chorizo, bacon, cârnati, brânza cu mucegai si ardei gras"
+		on_release: app.pop1("images/suprema.jpg")
+
+		IconRightWidget:
+			icon: "plus"
+			on_release: app.pizza_dialog(app.preturi['SupremaMare'],app.preturi['SupremaMica'],"images/suprema.jpg","Pizza Suprema")
+
+		ImageLeftWidget:
+			source:"images/suprema.jpg"
+			size:root.size
+
+    TwoLineAvatarIconListItem:
+        text: "Pizza Prosciutto Funghi "
+        secondary_text: "mozzarella, sos rosii, 2 x sunca porc si 2 x ciuperci proaspete"
+        on_release: app.pop1("images/prosciuttofunghi.jpg")
+
+        IconRightWidget:
+            icon: "plus"
+            on_release: app.pizza_dialog(app.preturi['ProsciuttoFunghiMare'],app.preturi['ProsciuttoFunghiMica'],"images/prosciuttofunghi.jpg","Pizza Prosciutto Funghi")
+
+        ImageLeftWidget:
+            source:"images/prosciuttofunghi.jpg"
+            size:root.size
+
+    TwoLineAvatarIconListItem:
+        text: "Pizza Mexicana"
+        secondary_text: "mozzarella, sos rosii, salam chorizo, bacon, brânza cu mucegai si peperoncino "
+        on_release: app.pop1("images/Mexicana.jpg")
+
+        IconRightWidget:
+            icon: "plus"
+            on_release: app.pizza_dialog(app.preturi['MexicanaMica'],app.preturi['MexicanaMare'],"images/Mexicana.jpg","Pizza Mexicana")
+
+        ImageLeftWidget:
+            source:"images/Mexicana.jpg"
+            size:root.size
+
+    TwoLineAvatarIconListItem:
+        text: "Pizza Hawaiana"
+        secondary_text: "mozzarella, sos rosii, ananas, sunca porc si porumb  "
+        on_release: app.pop1("images/Hawaiana.jpg")
+
+        IconRightWidget:
+            icon: "plus"
+            on_release: app.pizza_dialog(app.preturi['HawaianaMica'],app.preturi['HawaianaMare'],"images/Hawaiana.jpg","Pizza Hawaiana")
+
+        ImageLeftWidget:
+            source:"images/Hawaiana.jpg"
+            size:root.size
+
+    TwoLineAvatarIconListItem:
+        text: "Pizza Diavola"
+        secondary_text: "mozzarella, sos rosii, salam chorizo, cârnati si peperoncino "
+        on_release: app.pop1("images/Diavola.jpg")
+
+        IconRightWidget:
+            icon: "plus"
+            on_release: app.pizza_dialog(app.preturi['DiavolaMica'],app.preturi['DiavolaMare'],"images/Diavola.jpg","Pizza Diavola")
+
+        ImageLeftWidget:
+            source:"images/Diavola.jpg"
+            size:root.size
+
+    TwoLineAvatarIconListItem:
+        text: "Pizza Taraneasca"
+        secondary_text: "mozzarella, sos rosii, piept de pui, bacon, cârnati, porumb, ardei gras si ceapa rosie  "
+        on_release: app.pop1("images/Taraneasca.jpg")
+
+        IconRightWidget:
+            icon: "plus"
+            on_release: app.pizza_dialog(app.preturi['TaraneascaMica'],app.preturi['TaraneascaMare'],"images/Taraneasca.jpg","Pizza Taraneasca")
+
+        ImageLeftWidget:
+            source:"images/Taraneasca.jpg"
+            size:root.size
+
+    TwoLineAvatarIconListItem:
+        text: "Pizza Rustica"
+        secondary_text: "mozzarella, sos rosii, piept de pui, bacon, cârnati, porumb, ardei gras si ceapa rosie  "
+        on_release: app.pop1("images/Rustica.jpg")
+
+        IconRightWidget:
+            icon: "plus"
+            on_release: app.pizza_dialog(app.preturi['RusticaMica'],app.preturi['RusticaMare'],"images/Taraneasca.jpg","Pizza Rustica")
+
+        ImageLeftWidget:
+            source:"images/Rustica.jpg"
+            size:root.size

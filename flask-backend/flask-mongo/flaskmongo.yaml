@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-mongo
+  labels:
+    app: flask-mongo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-mongo
+  template:
+    metadata:
+      labels:
+        app: flask-mongo
+    spec:
+      containers:
+        - name: flask-mongo
+          image: vlrags/flask-mongo:1.2.0
+          ports:
+            - containerPort: 5000
+          imagePullPolicy: Always

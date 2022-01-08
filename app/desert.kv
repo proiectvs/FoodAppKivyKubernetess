@@ -1,0 +1,26 @@
+<Desert@MDList>:
+    TwoLineAvatarIconListItem:
+        text: "Meniu clatite cu miere "
+        secondary_text: "clatita din faina, lapte, unt, zahar, vanilie, miere de albine"
+        on_release: app.pop1("images/clatitemiere.jpg")
+
+        IconRightWidget:
+	        icon: "plus"
+			on_release: app.pizza_dialog(app.preturi['clatitemieremare'],app.preturi['clatitemieremic'],"images/clatitemiere.jpg","Meniu Clatite Miere")
+
+        ImageLeftWidget:
+			source:"images/clatitemiere.jpg"
+			size:root.size
+
+    TwoLineAvatarIconListItem:
+        text: "Meniu clatite cu ciocolata "
+        secondary_text: "clatita din faina, lapte, unt, zahar, vanilie, ciocolata naturala"
+        on_release: app.pop1("images/clatiteciocolata.jpg")
+
+        IconRightWidget:
+	        icon: "plus"
+			on_release: app.pizza_dialog(app.preturi['clatiteciocolatamare'],app.preturi['clatiteciocolatamica'],"images/clatitemiere.jpg","Meniu Clatite Miere")
+
+        ImageLeftWidget:
+			source:"images/clatiteciocolata.jpg"
+			size:root.size

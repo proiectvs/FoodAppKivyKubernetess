@@ -1,0 +1,82 @@
+from kivymd.app import MDApp
+from kivy.lang import Builder
+
+
+class Test(MDApp):
+
+    def build(self):
+        self.theme_cls.primary_palette = "Yellow"
+		#self.theme_cls.
+        return Builder.load_string(
+            '''
+BoxLayout:
+    orientation:'vertical'
+
+    MDToolbar:
+        title: 'Bottom navigation'
+        md_bg_color: .2, .2, .2, 1
+        specific_text_color: 1, 1, 1, 1
+
+    MDBottomNavigation:
+        panel_color: .2, .2, .2, 1
+
+        MDBottomNavigationItem:
+            name: 'screen 1'
+            text: 'Menu'
+            icon: 'pizza'
+
+            ScrollView:
+
+				MDList:
+					
+					TwoLineAvatarIconListItem:
+						text: "Pizza Mediterana"
+						secondary_text: "porumb ciuperci mozarella sunca"
+
+						
+
+						IconRightWidget:
+							icon: "Plus"		
+					
+					OneLineAvatarIconListItem:
+						on_release: print("Click!")
+
+						IconLeftWidget:
+							icon: "github"
+
+					OneLineAvatarIconListItem:
+						on_release: print("Click 2!")
+
+						IconLeftWidget:
+							icon: "gitlab"
+        MDBottomNavigationItem:
+            name: 'screen 2'
+            text: 'Burger'
+            icon: 'hamburger'
+
+            MDLabel:
+                text: 'I programming of C++'
+                halign: 'center'
+
+        MDBottomNavigationItem:
+            name: 'screen 3'
+            text: 'Desert'
+            icon: 'cake'
+
+            MDLabel:
+                text: 'JS'
+                halign: 'center'
+				
+		MDBottomNavigationItem:
+            name: 'screen 4'
+            text: 'Cosul meu'
+            icon: 'cart'
+
+            MDLabel:
+                text: 'JS'
+                halign: 'center'
+'''
+        )
+
+
+Test().run()

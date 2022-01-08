@@ -1,0 +1,12 @@
+docker build -t flask-mongo:1.2.0 .
+
+docker push flask-mongo:1.2.0
+
+kubectl delete deployment flask-mongo
+
+kubectl create -f flaskmongo.yaml
+
+kubectl scale deployment flask-mongo --replicas=2
+
+
+kubectl create -f flaskmongo-svc.yaml

@@ -1,0 +1,80 @@
+
+
+<main_kv>:
+    orientation:'vertical'
+
+    MDToolbar:
+        title: 'Food Restaurant'
+        md_bg_color: .2, .2, .2, .25
+        specific_text_color: 1, 1, 1, 1
+        id:toolbar
+        #right_action_items: [["login", lambda x: app.loginpop()]]
+        MDRaisedButton:
+            text:"LOGIN"
+            id:login
+            on_press: app.loginpop()
+            #on_release:app.starepop()
+
+
+        MDRaisedButton:
+            text:"Register"
+            id:register
+            on_press: app.registerpop()
+
+
+
+    MDBottomNavigation:
+        panel_color: .2, .2, .2, 0.25
+
+        MDBottomNavigationItem:
+            name: 'screen 0'
+            text: 'Oferte'
+            icon: 'offer'
+
+			ScrollView:
+				Oferte:
+
+
+        MDBottomNavigationItem:
+            name: 'screen 1'
+            text: 'Pizza'
+            icon: 'pizza'
+
+			ScrollView:
+				Menu1:
+			
+		
+        MDBottomNavigationItem:
+            name: 'screen 2'
+            text: 'Burger'
+            icon: 'hamburger'
+
+            ScrollView:
+                Burger:
+
+        MDBottomNavigationItem:
+            name: 'screen 3'
+            text: 'Desert'
+            icon: 'cake'
+
+            ScrollView:
+                Desert:
+				
+		MDBottomNavigationItem:
+            name: 'screen 4'
+            text: 'Cosul meu'
+            icon: 'cart'
+
+
+			ScrollView:
+
+
+				Cosul:
+                    id:cosx
+
+            MDToolbar:
+                title: "Comanda"
+                icon: "git"
+                type: "bottom"
+                right_action_items: [["cart-arrow-right", lambda x: app.butoncomanda()]]
+                mode: "free-end"
